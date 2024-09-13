@@ -502,7 +502,8 @@
 						</div>
 					</div>
 					<div class="row page-margin-top">
-						<form class="contact-form" id="contact-form" method="post" action="https://formsubmit.co/bluepandaremodeling@gmail.com">
+						<form class="contact-form" onsubmit="showMessage(event)" id="contact-form"  method="post" action="https://formsubmit.co/bluepandaremodeling@gmail.com">
+							
 							<div class="row">
 								<fieldset class="column column-1-2">
 									<input class="text-input" name="name" type="text" value="Your Name *" placeholder="Your Name *">
@@ -628,5 +629,19 @@
 		<script type="text/javascript" src="js/jquery.imagesloaded-packed.js"></script>
 		<script type="text/javascript" src="js/main.js"></script>
 		<script type="text/javascript" src="js/odometer.min.js"></script>
+
+		<p id="message" style="display:none; color: green;">Thank you for your inquiry. We will respond it as soon as possible. Thanks!</p>
+		<script>
+		function showMessage(event) {
+			event.preventDefault(); // Prevents the form from actually submitting
+			
+			// Simulate form submission (e.g., AJAX call)
+			setTimeout(() => {
+				document.getElementById("message").style.display = "block"; // Show message
+			}, 1000); // Delay to simulate form processing
+			
+			// Normally, you'd handle the form data and submission here
+		}
+		</script>
 	</body>
 </html>
