@@ -26,6 +26,17 @@
 		<link rel="stylesheet" type="text/css" href="fonts/template/styles.css">
 		<link rel="stylesheet" type="text/css" href="fonts/social/styles.css">
 		<link rel="shortcut icon" href="images/favicon.ico">
+		<script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "IglxKjApNUagHGcdh",
+      });
+   })();
+</script>
+<script src="/js/sendMail.js"></script>
 	</head>
 	<body>
 		<div class="site-container">
@@ -176,7 +187,7 @@
 												</a>
 											</li>
 											<li>
-												<a href="service_paver_walkways.html" title="Kitchen and Living Room Renovation">
+												<a href="kitchen_and_livingRoom_renovation.html" title="Kitchen and Living Room Renovation">
 													Kitchen and Living Room Renovation
 												</a>
 											</li>
@@ -186,7 +197,7 @@
 												</a>
 											</li>
 											<li>
-												<a href="service_solar_systems.html" title="Bathroom Renovation">
+												<a href="service_bathroom_renovation.html" title="Bathroom Renovation">
 													Bathroom Renovation
 												</a>
 											</li>
@@ -203,7 +214,7 @@
 												</a>
 											</li>
 											<li>
-												<a href="project_garden_renovation.html" title="Kitchen and Living Room Renovation">
+												<a href="project_kitchen_renovation.html" title="Kitchen and Living Room Renovation">
 													Kitchen and Living Room Renovation
 												</a>
 											</li>
@@ -218,7 +229,7 @@
 												</a>
 											</li>
 											<li>
-												<a href="project_solar_systems.html" title="Bathroom Renovation">
+												<a href="project_bathroom_renovation.html" title="Bathroom Renovation">
 													Bathroom Renovation												</a>
 											</li>
 										</ul>
@@ -333,7 +344,7 @@
 													</a>
 												</li>
 												<li>
-													<a href="service_paver_walkways.html" title="Kitchen and Living Room Renovation">
+													<a href="kitchen_and_livingRoom_renovation.html" title="Kitchen and Living Room Renovation">
 														Kitchen and Living Room Renovation
 													</a>
 												</li>
@@ -343,7 +354,7 @@
 													</a>
 												</li>
 												<li>
-													<a href="service_solar_systems.html" title="Bathroom Renovation">
+													<a href="service_bathroom_renovation.html" title="Bathroom Renovation">
 														Bathroom Renovation
 
 													</a>
@@ -362,7 +373,7 @@
 													</a>
 												</li>
 												<li>
-													<a href="project_garden_renovation.html" title="Garden Renovation">
+													<a href="project_kitchen_renovation.html" title="Garden Renovation">
 														Garden Renovation
 													</a>
 												</li>
@@ -377,7 +388,7 @@
 													</a>
 												</li>
 												<li>
-													<a href="project_solar_systems.html" title="Bathroom Renovation">
+													<a href="project_bathroom_renovation.html" title="Bathroom Renovation">
 														Bathroom Renovation
 													</a>
 												</li>
@@ -588,12 +599,12 @@
 										</div>
 										<div class="row margin-top-20">
 											<fieldset class="column column-1-2">
-												<input class="text-input" name="name" type="text" value="Your Name *" placeholder="Your Name *">
-												<input class="text-input" name="email" type="text" value="Your Email *" placeholder="Your Email *">
-												<input class="text-input" name="phone" type="text" value="Your Phone" placeholder="Your Phone">
+												<input class="text-input" id="userName" name="name" type="text" value="Your Name *" placeholder="Your Name *">
+												<input class="text-input" id="email_id" name="email" type="text" value="Your Email *" placeholder="Your Email *">
+												<input class="text-input" id="phone" name="phone" type="text" value="Your Phone" placeholder="Your Phone">
 											</fieldset>
 											<fieldset class="column column-1-2">
-												<textarea name="message" placeholder="Message *">Message *</textarea>
+												<textarea name="message" id="message" placeholder="Message *">Message *</textarea>
 											</fieldset>
 										</div>
 										<div class="row margin-top-30">
@@ -604,7 +615,7 @@
 												<input type="hidden" name="action" value="contact_form">
 												<input type="hidden" name="type" value="Interior Renovation">
 												<input type="hidden" name="total-cost" id="ir-total-cost" value="$2,300.00">
-												<input type="submit" name="submit" value="SUBMIT NOW" class="more active">
+												<input type="submit" onclick="sendMail()" name="submit" value="SUBMIT NOW" class="more active">
 											</div>
 										</div>
 									</div>
