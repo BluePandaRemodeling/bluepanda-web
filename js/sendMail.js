@@ -1,16 +1,16 @@
 function sendMail() {
     let params = {
-      from_name: document.getElementById("userName").value,
-      email_id: document.getElementById("email_id").value,
+      name: document.getElementById("userName").value,
+      email: document.getElementById("email_id").value,
       phone: document.getElementById("phone").value,
       message: document.getElementById("message").value,
     };
   
-    // First email sending
-    emailjs.send("service_a019pts", "template_vfydvhc", params)
+    // First email sending to the user.
+    emailjs.send("service_s8dhxmj","template_lappwjh", params)
       .then((res) => {
-        // If the first email is successful, send the confirmation email
-        return emailjs.send("service_a019pts", "template_tkcu938", params);
+        // If the first email is successful, send the form email to bluepandaremodeling.
+        return emailjs.send("service_s8dhxmj","template_4ihjr2c", params);
       })
       .then(() => {
         // Both emails were successful
